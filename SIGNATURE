@@ -1,0 +1,31 @@
+This file contains message digests of all files listed in MANIFEST,
+signed via the Module::Signature module, version 0.21.
+
+To verify the content in this distribution, first make sure you have
+Module::Signature installed, then type:
+
+    % cpansign -v
+
+It would check each file's integrity, as well as the signature's
+validity.  If "==> Signature verified OK! <==" is not displayed,
+the distribution may already have been compromised, and you should
+not run its Makefile.PL or Build.PL.
+
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA1
+
+SHA1 66e3ac8563c91ab0fb4ee78a050698525693c07d Changes
+SHA1 b79bca72178f61e7594bb2668208503ef9305cc9 EastAsianWidth.pm
+SHA1 51c65aacf37aa390e945f6fa7cc95f2220cebb21 MANIFEST
+SHA1 78c9ba6679abb379834f74528534d6a79d07e3ff Makefile.PL
+SHA1 791e06fcb02687bc9c4c8d09eacb72a5fe7c6392 README
+SHA1 d2f7e2a5c02490a609fe37814899d2afcdeaf8a8 t/0-signature.t
+SHA1 f6efdb9d7620d5d8cdac2e4d39e633603450a00e t/1-basic.t
+SHA1 0a22970ba53a28370d2a8defc8ea8dec7cad601d t/2-big5.t
+-----BEGIN PGP SIGNATURE-----
+Version: GnuPG v1.2.1 (FreeBSD)
+
+iD8DBQE+K/QatLPdNzw1AaARAiLmAJ4zpsjmpcONc1zDrQ79lzqndksjEACcDVPu
+K4OKb7t8b+/DZrkvPd/DhFI=
+=OtzX
+-----END PGP SIGNATURE-----

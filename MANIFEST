@@ -1,0 +1,9 @@
+Changes
+EastAsianWidth.pm
+MANIFEST
+Makefile.PL
+README
+SIGNATURE
+t/0-signature.t
+t/1-basic.t
+t/2-big5.t

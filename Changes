@@ -1,0 +1,5 @@
+____________________________________________________________________________
+[  3694] By: autrijus                              on 2003/01/20  12:40:36
+        Log: * Convert::EastAsianWidth, 0.01.
+	   + EastAsianWidth.pm MANIFEST Makefile.PL README
+	   + t/0-signature.t t/1-basic.t t/2-big5.t
