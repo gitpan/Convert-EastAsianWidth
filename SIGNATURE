@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.21.
+signed via the Module::Signature module, version 0.22.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,18 +14,25 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 66e3ac8563c91ab0fb4ee78a050698525693c07d Changes
-SHA1 b79bca72178f61e7594bb2668208503ef9305cc9 EastAsianWidth.pm
-SHA1 51c65aacf37aa390e945f6fa7cc95f2220cebb21 MANIFEST
-SHA1 78c9ba6679abb379834f74528534d6a79d07e3ff Makefile.PL
+SHA1 cc64306a287ac576cc6fe18f63fa1e0679b503eb Changes
+SHA1 2804b8f89827cc2f902712df3267b58315c3efb0 EastAsianWidth.pm
+SHA1 860735ae89dae766609f24c802753c85342d025f MANIFEST
+SHA1 ebeb33d2ea4545735eba77b1bbbcc33831c538c8 META.yml
+SHA1 3a9a75852dcc72d885053a0e6db5f548b0a01d4a Makefile.PL
 SHA1 791e06fcb02687bc9c4c8d09eacb72a5fe7c6392 README
+SHA1 e3c2a5ee716e65b0e9a0d92ea492be19ff86ca43 inc/Module/Install.pm
+SHA1 867725bcf2c2663a00058ed21c25e158c2086f63 inc/Module/Install/AutoInstall.pm
+SHA1 364a32d451f89951a6059478bfe78d2266c2bf02 inc/Module/Install/Base.pm
+SHA1 d5ed6e570eb46cb6099fcd19f2bc78e974541ac6 inc/Module/Install/MakeMaker.pm
+SHA1 07393d347ae07cc2c1c31325241741116f1a3695 inc/Module/Install/Makefile.pm
+SHA1 c513b51407393fd668e4d6d18dfe9f2c026c0fad inc/Module/Install/Metadata.pm
 SHA1 d2f7e2a5c02490a609fe37814899d2afcdeaf8a8 t/0-signature.t
-SHA1 f6efdb9d7620d5d8cdac2e4d39e633603450a00e t/1-basic.t
-SHA1 0a22970ba53a28370d2a8defc8ea8dec7cad601d t/2-big5.t
+SHA1 5e11a5a2fff368991561900edcac479fc8e5bcf6 t/1-basic.t
+SHA1 50a32fbb4d8cc46fa7b8b498b81ccdb270f8e168 t/2-big5.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.2.1 (FreeBSD)
 
-iD8DBQE+K/QatLPdNzw1AaARAiLmAJ4zpsjmpcONc1zDrQ79lzqndksjEACcDVPu
-K4OKb7t8b+/DZrkvPd/DhFI=
-=OtzX
+iD8DBQE+gIk9tLPdNzw1AaARAsDCAJ9G+qCpV+k5K5Vakf96umO2HGOhmQCffVLq
++1EGJfHy8danoyVjevRYwI8=
+=N1eL
 -----END PGP SIGNATURE-----

@@ -1,15 +1,17 @@
 # $File: //member/autrijus/Convert-EastAsianWidth/EastAsianWidth.pm $ $Author: autrijus $
-# $Revision: #1 $ $Change: 3694 $ $DateTime: 2003/01/20 12:40:36 $
+# $Revision: #3 $ $Change: 4931 $ $DateTime: 2003/03/25 16:42:43 $
 
 package Convert::EastAsianWidth;
-$Convert::EastAsianWidth::VERSION = '0.01';
+$Convert::EastAsianWidth::VERSION = '0.02';
 
 use 5.006;
 use strict;
-use base 'Exporter';
+use Exporter;
+our @ISA = 'Exporter';
+our @EXPORT = qw(to_fullwidth to_halfwidth);
 
 {
-    # work wround perlbug (or misfeature?)
+    # work around perlbug (or misfeature?)
     package main;
     BEGIN { $Unicode::EastAsianWidth::EastAsian = 1 }
     use Unicode::EastAsianWidth;
@@ -21,8 +23,8 @@ Convert::EastAsianWidth - Convert between full- and half-width characters
 
 =head1 VERSION
 
-This document describes version 0.01 of Convert:EastAsianWidth,
-relased January 20, 2003.
+This document describes version 0.02 of Convert:EastAsianWidth,
+released March 26, 2003.
 
 =head1 SYNOPSIS
 

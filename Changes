@@ -1,4 +1,18 @@
 ____________________________________________________________________________
+[  4931] By: autrijus                              on 2003/03/25  16:42:43
+        Log: * 0.02, using Module::Install framework.
+             * Vincent at csie.ntu.edu.tw reported bug in exporting.
+	   ! EastAsianWidth.pm Makefile.PL t/1-basic.t
+	   ! t/2-big5.t
+____________________________________________________________________________
+[  3705] By: autrijus                              on 2003/01/20  15:16:50
+        Log: * spellcheck.
+	   ! EastAsianWidth.pm
+____________________________________________________________________________
+[  3695] By: autrijus                              on 2003/01/20  12:43:13
+        Log: * changes and signatures.
+	   + Changes SIGNATURE
+____________________________________________________________________________
 [  3694] By: autrijus                              on 2003/01/20  12:40:36
         Log: * Convert::EastAsianWidth, 0.01.
 	   + EastAsianWidth.pm MANIFEST Makefile.PL README

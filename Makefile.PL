@@ -1,7 +1,7 @@
 # $File: //member/autrijus/Convert-EastAsianWidth/Makefile.PL $ $Author: autrijus $
-# $Revision: #1 $ $Change: 3694 $ $DateTime: 2003/01/20 12:40:36 $
+# $Revision: #2 $ $Change: 4931 $ $DateTime: 2003/03/25 16:42:43 $
 
-use ExtUtils::MakeMaker;
+use inc::Module::Install;
 
 WriteMakefile(
     AUTHOR		=> 'Autrijus Tang (autrijus@autrijus.org)',
@@ -12,5 +12,8 @@ WriteMakefile(
 	'Unicode::EastAsianWidth' => '0',
     }
 );
+
+&AutoInstall->write;
+&Meta->write;
  
 1;

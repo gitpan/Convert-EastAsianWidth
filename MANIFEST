@@ -1,9 +1,16 @@
 Changes
 EastAsianWidth.pm
 MANIFEST
+META.yml
 Makefile.PL
 README
 SIGNATURE
+inc/Module/Install.pm
+inc/Module/Install/AutoInstall.pm
+inc/Module/Install/Base.pm
+inc/Module/Install/MakeMaker.pm
+inc/Module/Install/Makefile.pm
+inc/Module/Install/Metadata.pm
 t/0-signature.t
 t/1-basic.t
 t/2-big5.t
