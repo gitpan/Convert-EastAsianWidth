@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.22.
+signed via the Module::Signature module, version 0.35.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,25 +14,27 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 cc64306a287ac576cc6fe18f63fa1e0679b503eb Changes
-SHA1 2804b8f89827cc2f902712df3267b58315c3efb0 EastAsianWidth.pm
-SHA1 860735ae89dae766609f24c802753c85342d025f MANIFEST
-SHA1 ebeb33d2ea4545735eba77b1bbbcc33831c538c8 META.yml
-SHA1 3a9a75852dcc72d885053a0e6db5f548b0a01d4a Makefile.PL
+SHA1 fc17105e7bbbb50efde2dd3b72503ab52317a9f8 Changes
+SHA1 7aebc46b1c0f279258ea2ec121fc9c30bf29219b MANIFEST
+SHA1 9ce10fba1183874ed6e30bc111c95a57ffeef313 META.yml
+SHA1 bdf8f026f0f6a1c0b2650bbe5ebd45c56464978e Makefile.PL
 SHA1 791e06fcb02687bc9c4c8d09eacb72a5fe7c6392 README
-SHA1 e3c2a5ee716e65b0e9a0d92ea492be19ff86ca43 inc/Module/Install.pm
-SHA1 867725bcf2c2663a00058ed21c25e158c2086f63 inc/Module/Install/AutoInstall.pm
-SHA1 364a32d451f89951a6059478bfe78d2266c2bf02 inc/Module/Install/Base.pm
-SHA1 d5ed6e570eb46cb6099fcd19f2bc78e974541ac6 inc/Module/Install/MakeMaker.pm
-SHA1 07393d347ae07cc2c1c31325241741116f1a3695 inc/Module/Install/Makefile.pm
-SHA1 c513b51407393fd668e4d6d18dfe9f2c026c0fad inc/Module/Install/Metadata.pm
+SHA1 a7e4c591a8bef0024f3dedef216dbd22ab789ebf inc/ExtUtils/AutoInstall.pm
+SHA1 2b6751f9e3f78bfba9ebf348d9d99ddbde9d35e8 inc/Module/Install.pm
+SHA1 b6eb96744a9cabe8e807f453ab27c584c3eda92e inc/Module/Install/AutoInstall.pm
+SHA1 0e59a6491b7275cacf070218c862a42e8135f6d8 inc/Module/Install/Base.pm
+SHA1 2947a46529e9b64cf5e0291a20332e71edabc546 inc/Module/Install/Include.pm
+SHA1 cb63ee2fceecea6f93cc25bfb5cc122ca6870ed8 inc/Module/Install/MakeMaker.pm
+SHA1 f042d91d7f691e36c8bcb0b495dfc0b9f92576c3 inc/Module/Install/Makefile.pm
+SHA1 5494a21ff1755b95f0d36c788e4816af0c804645 inc/Module/Install/Metadata.pm
+SHA1 ea136e03d6907592dad0e1fb7df3b87c1202a6c5 lib/Convert/EastAsianWidth.pm
 SHA1 d2f7e2a5c02490a609fe37814899d2afcdeaf8a8 t/0-signature.t
 SHA1 5e11a5a2fff368991561900edcac479fc8e5bcf6 t/1-basic.t
 SHA1 50a32fbb4d8cc46fa7b8b498b81ccdb270f8e168 t/2-big5.t
 -----BEGIN PGP SIGNATURE-----
-Version: GnuPG v1.2.1 (FreeBSD)
+Version: GnuPG v1.2.3 (FreeBSD)
 
-iD8DBQE+gIk9tLPdNzw1AaARAsDCAJ9G+qCpV+k5K5Vakf96umO2HGOhmQCffVLq
-+1EGJfHy8danoyVjevRYwI8=
-=N1eL
+iD8DBQE/fLq5tLPdNzw1AaARAvQjAJ9w6t1kZTETxiiM88JF2r+jnulyugCdFIFA
+diD+Fq15cNJtRb24jSb4YPI=
+=Q8fH
 -----END PGP SIGNATURE-----

@@ -1,7 +1,10 @@
+#line 1 "inc/Module/Install/Base.pm - /usr/local/lib/perl5/site_perl/5.8.0/Module/Install/Base.pm"
 # $File: //depot/cpan/Module-Install/lib/Module/Install/Base.pm $ $Author: autrijus $
-# $Revision: #8 $ $Change: 1375 $ $DateTime: 2003/03/18 12:29:32 $ vim: expandtab shiftwidth=4
+# $Revision: #9 $ $Change: 1665 $ $DateTime: 2003/08/18 07:52:47 $ vim: expandtab shiftwidth=4
 
 package Module::Install::Base;
+
+#line 31
 
 sub new {
     my ($class, %args) = @_;
@@ -15,16 +18,27 @@ sub new {
     bless(\%args, $class);
 }
 
+#line 49
+
 sub AUTOLOAD {
     my $self = shift;
     goto &{$self->_top->autoload};
 }
 
+#line 60
+
 sub _top { $_[0]->{_top} }
+
+#line 71
 
 sub admin {
     my $self = shift;
     $self->_top->{admin} or Module::Install::Base::FakeAdmin->new;
+}
+
+sub is_admin {
+    my $self = shift;
+    $self->admin->VERSION;
 }
 
 sub DESTROY {}
@@ -40,3 +54,4 @@ sub DESTROY {}
 
 __END__
 
+#line 115

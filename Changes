@@ -1,4 +1,20 @@
 ____________________________________________________________________________
+[  8321] By: autrijus                              on 2003/10/02  23:53:44
+        Log: * This be 0.03.
+             * attempts to fix $1 corruption reported by Terje
+	       Marthinussen.
+	   ! lib/Convert/EastAsianWidth.pm
+____________________________________________________________________________
+[  8320] By: autrijus                              on 2003/10/02  23:47:56
+        Log: * convert to the more modern lib/ layout
+	  +> lib/Convert/EastAsianWidth.pm
+	   - EastAsianWidth.pm
+	   ! MANIFEST Makefile.PL
+____________________________________________________________________________
+[  4933] By: autrijus                              on 2003/03/25  16:47:17
+        Log: * let's bundle EU::AI...
+	   ! MANIFEST Makefile.PL
+____________________________________________________________________________
 [  4931] By: autrijus                              on 2003/03/25  16:42:43
         Log: * 0.02, using Module::Install framework.
              * Vincent at csie.ntu.edu.tw reported bug in exporting.
@@ -8,10 +24,6 @@ ____________________________________________________________________________
 [  3705] By: autrijus                              on 2003/01/20  15:16:50
         Log: * spellcheck.
 	   ! EastAsianWidth.pm
-____________________________________________________________________________
-[  3695] By: autrijus                              on 2003/01/20  12:43:13
-        Log: * changes and signatures.
-	   + Changes SIGNATURE
 ____________________________________________________________________________
 [  3694] By: autrijus                              on 2003/01/20  12:40:36
         Log: * Convert::EastAsianWidth, 0.01.

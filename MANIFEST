@@ -1,16 +1,18 @@
 Changes
-EastAsianWidth.pm
-MANIFEST
-META.yml
-Makefile.PL
-README
-SIGNATURE
+inc/ExtUtils/AutoInstall.pm
 inc/Module/Install.pm
 inc/Module/Install/AutoInstall.pm
 inc/Module/Install/Base.pm
-inc/Module/Install/MakeMaker.pm
+inc/Module/Install/Include.pm
 inc/Module/Install/Makefile.pm
+inc/Module/Install/MakeMaker.pm
 inc/Module/Install/Metadata.pm
+lib/Convert/EastAsianWidth.pm
+Makefile.PL
+MANIFEST			This list of files
+META.yml
+README
+SIGNATURE
 t/0-signature.t
 t/1-basic.t
 t/2-big5.t
