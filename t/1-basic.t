@@ -1,12 +1,9 @@
 #!/usr/bin/perl
-# $File: //member/autrijus/Convert-EastAsianWidth/t/1-basic.t $ $Author: autrijus $
-# $Revision: #2 $ $Change: 4931 $ $DateTime: 2003/03/25 16:42:43 $
 
 use utf8;
+use encoding 'utf8';
 use strict;
-use Test;
-
-BEGIN { plan tests => 3 }
+use Test::Simple tests => 3;
 
 use Convert::EastAsianWidth;
 ok($Convert::EastAsianWidth::VERSION) if $Convert::EastAsianWidth::VERSION or 1;

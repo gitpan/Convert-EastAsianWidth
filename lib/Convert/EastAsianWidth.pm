@@ -1,10 +1,7 @@
-# $File: //member/autrijus/Convert-EastAsianWidth/lib/Convert/EastAsianWidth.pm $ $Author: autrijus $
-# $Revision: #2 $ $Change: 8321 $ $DateTime: 2003/10/02 23:53:44 $
-
 package Convert::EastAsianWidth;
-$Convert::EastAsianWidth::VERSION = '0.03';
+$Convert::EastAsianWidth::VERSION = '0.10';
 
-use 5.006;
+use 5.008;
 use strict;
 use Exporter;
 our @ISA = 'Exporter';
@@ -18,46 +15,11 @@ our @EXPORT = qw(to_fullwidth to_halfwidth);
 }
 use Unicode::EastAsianWidth; # must do that again for 5.8.1
 
-=head1 NAME
-
-Convert::EastAsianWidth - Convert between full- and half-width characters
-
-=head1 VERSION
-
-This document describes version 0.03 of Convert:EastAsianWidth,
-released October 3, 2003.
-
-=head1 SYNOPSIS
-
-    # Exports to_fullwidth() and to_halfwidth() by default
-    use Convert::EastAsianWidth;
-
-    my $u = to_fullwidth('ABC');	    # Full-width variant of 'ABC'
-    my $b = to_fullwidth('ABC', 'big5');    # Ditto, but in big5 encoding
-    my $x = to_halfwidth($u);		    # Gets back 'ABC'
-    my $y = to_halfwidth($b, 'big5');	    # Same as above
-
-=head1 DESCRIPTION
-
-This module uses the regular expression properties provided by
-B<Unicode::EastAsianWidth> to efficiently convert between full-
-and half-width characters.
-
-The first argument is the string to be converted; the second one
-represents the input and encodings.  If omitted, both are assumed
-by to Unicode strings.
-
-In Perl versions before 5.8, B<Encode::compat> is required for
-the encoding conversion function to work.
-
-=cut
-
 sub to_fullwidth {
     my $text;
     my $enc  = $_[1];
 
     if ($enc) {
-	require Encode::compat if $] < 5.007;
 	require Encode;
 	$text = Encode::decode($enc => $_[0]);
     }
@@ -83,7 +45,6 @@ sub to_halfwidth {
     my $enc = $_[1];
 
     if ($enc) {
-	require Encode::compat if $] < 5.007;
 	require Encode;
 	$text = Encode::decode($enc => $_[0]);
     }
@@ -109,23 +70,67 @@ sub to_halfwidth {
 
 __END__
 
+=head1 NAME
+
+Convert::EastAsianWidth - Convert between full- and half-width characters
+
+=head1 VERSION
+
+This document describes version 0.10 of Convert:EastAsianWidth,
+released October 16, 2007.
+
+=head1 SYNOPSIS
+
+    # Exports to_fullwidth() and to_halfwidth() by default
+    use Convert::EastAsianWidth;
+
+    my $u = to_fullwidth('ABC');	    # Full-width variant of 'ABC'
+    my $b = to_fullwidth('ABC', 'big5');    # Ditto, but in big5 encoding
+    my $x = to_halfwidth($u);		    # Gets back 'ABC'
+    my $y = to_halfwidth($b, 'big5');	    # Same as above
+
+=head1 DESCRIPTION
+
+This module uses the regular expression properties provided by
+B<Unicode::EastAsianWidth> to efficiently convert between full-
+and half-width characters.
+
+The first argument is the string to be converted; the second one
+represents the input and encodings.  If omitted, both are assumed
+by to Unicode strings.
+
 =head1 SEE ALSO
 
-L<Unicode::EastAsianWidth>, L<charnames>
-
-L<Encode>, L<Encode::compat>
+L<Unicode::EastAsianWidth>, L<charnames>, L<Encode>
 
 =head1 AUTHORS
 
-Autrijus Tang E<lt>autrijus@autrijus.orgE<gt>
+Audrey Tang E<lt>cpan@audreyt.orgE<gt>
 
 =head1 COPYRIGHT
 
-Copyright 2003 by Autrijus Tang E<lt>autrijus@autrijus.orgE<gt>.
+Copyright 2003, 2007 by Audrey Tang E<lt>cpan@audreyt.orgE<gt>.
 
-This program is free software; you can redistribute it and/or modify it
-under the same terms as Perl itself.
+This software is released under the MIT license cited below.
 
-See L<http://www.perl.com/perl/misc/Artistic.html>
+=head2 The "MIT" License
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
+OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
+THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
+DEALINGS IN THE SOFTWARE.
 
 =cut
