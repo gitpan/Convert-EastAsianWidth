@@ -1,19 +1,12 @@
 package Convert::EastAsianWidth;
-$Convert::EastAsianWidth::VERSION = '0.10';
 
 use 5.008;
 use strict;
 use Exporter;
+
+our $VERSION = '1.00';
 our @ISA = 'Exporter';
 our @EXPORT = qw(to_fullwidth to_halfwidth);
-
-{
-    # work around perlbug (or misfeature?)
-    package main;
-    BEGIN { $Unicode::EastAsianWidth::EastAsian = 1 }
-    use Unicode::EastAsianWidth;
-}
-use Unicode::EastAsianWidth; # must do that again for 5.8.1
 
 sub to_fullwidth {
     my $text;
@@ -27,15 +20,8 @@ sub to_fullwidth {
 	$text = $_[0];
     }
 
-    require charnames;
-    my ($full, $name);
-    $text =~ s{(\p{InHalfwidth})}{
-	my $char = $1;
-	($name = charnames::viacode(ord($char))) && (
-	    $full = charnames::vianame( "FULLWIDTH $name" ) ||
-		    charnames::vianame( "IDEOGRAPHIC $name" )
-	) ? chr($full) : $char;
-    }eg;
+
+    $text =~ tr/ -~/\x{3000}\x{FF01}-\x{FF5E}/; 
 
     return ( $enc ? Encode::encode($enc => $text) : $text );
 }
@@ -52,17 +38,7 @@ sub to_halfwidth {
 	$text = $_[0];
     }
 
-    require charnames;
-    my ($name);
-    $text =~ s{(\p{InHalfwidthAndFullwidthForms}|\p{InCJKSymbolsAndPunctuation})}{
-	my $char = $1;
-	$name = charnames::viacode(ord($char));
-	(substr($name, 0, 10) eq 'FULLWIDTH ')
-	    ? chr(charnames::vianame(substr($name, 10)))
-	: (substr($name, 0, 12) eq 'IDEOGRAPHIC ')
-	    ? chr(charnames::vianame(substr($name, 12)))
-	: $char;
-    }eg;
+    $text =~ tr/\x{3000}\x{FF01}-\x{FF5E}/ -~/;
 
     return ( $enc ? Encode::encode($enc => $text) : $text );
 }
@@ -76,8 +52,8 @@ Convert::EastAsianWidth - Convert between full- and half-width characters
 
 =head1 VERSION
 
-This document describes version 0.10 of Convert:EastAsianWidth,
-released October 16, 2007.
+This document describes version 1.00 of Convert:EastAsianWidth,
+released November 17, 2009.
 
 =head1 SYNOPSIS
 
@@ -91,46 +67,37 @@ released October 16, 2007.
 
 =head1 DESCRIPTION
 
-This module uses the regular expression properties provided by
-B<Unicode::EastAsianWidth> to efficiently convert between full-
-and half-width characters.
+This module efficiently convert between full- and half-width ASCII and
+punctuation characters.
 
 The first argument is the string to be converted; the second one
 represents the input and encodings.  If omitted, both are assumed
-by to Unicode strings.
+to be Unicode strings.
+
+=head1 CAVEATS
+
+This module does not handle conversion of full/half width katakana, which
+is a slightly more complicated problem because of the need to incorporate
+diacritics.
+
+Many thanks to BKB for the disclaimer above and for suggesting a more
+efficient conversion algorithm based on C<tr///>.
 
 =head1 SEE ALSO
 
-L<Unicode::EastAsianWidth>, L<charnames>, L<Encode>
+L<Encode>
 
 =head1 AUTHORS
 
-Audrey Tang E<lt>cpan@audreyt.orgE<gt>
+唐鳳 E<lt>cpan@audreyt.orgE<gt>
 
-=head1 COPYRIGHT
+=head1 CC0 1.0 Universal
 
-Copyright 2003, 2007 by Audrey Tang E<lt>cpan@audreyt.orgE<gt>.
+To the extent possible under law, 唐鳳 has waived all copyright and related
+or neighboring rights to Module-Signature.
 
-This software is released under the MIT license cited below.
+This work is published from Taiwan.
 
-=head2 The "MIT" License
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in
-all copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL
-THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER
-DEALINGS IN THE SOFTWARE.
+L<http://creativecommons.org/publicdomain/zero/1.0>
 
 =cut

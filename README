@@ -3,8 +3,8 @@ NAME
     characters
 
 VERSION
-    This document describes version 0.10 of Convert:EastAsianWidth, released
-    October 16, 2007.
+    This document describes version 1.00 of Convert:EastAsianWidth, released
+    November 17, 2009.
 
 SYNOPSIS
         # Exports to_fullwidth() and to_halfwidth() by default
@@ -16,42 +16,32 @@ SYNOPSIS
         my $y = to_halfwidth($b, 'big5');       # Same as above
 
 DESCRIPTION
-    This module uses the regular expression properties provided by
-    Unicode::EastAsianWidth to efficiently convert between full- and
-    half-width characters.
+    This module efficiently convert between full- and half-width ASCII and
+    punctuation characters.
 
     The first argument is the string to be converted; the second one
-    represents the input and encodings. If omitted, both are assumed by to
+    represents the input and encodings. If omitted, both are assumed to be
     Unicode strings.
 
+CAVEATS
+    This module does not handle conversion of full/half width katakana,
+    which is a slightly more complicated problem because of the need to
+    incorporate diacritics.
+
+    Many thanks to BKB for the disclaimer above and for suggesting a more
+    efficient conversion algorithm based on "tr///".
+
 SEE ALSO
-    Unicode::EastAsianWidth, charnames, Encode
+    Encode
 
 AUTHORS
-    Audrey Tang <cpan@audreyt.org>
+    唐鳳 <cpan@audreyt.org>
 
-COPYRIGHT
-    Copyright 2003, 2007 by Audrey Tang <cpan@audreyt.org>.
+CC0 1.0 Universal
+    To the extent possible under law, 唐鳳 has waived all copyright and
+    related or neighboring rights to Module-Signature.
 
-    This software is released under the MIT license cited below.
+    This work is published from Taiwan.
 
-  The "MIT" License
-    Permission is hereby granted, free of charge, to any person obtaining a
-    copy of this software and associated documentation files (the
-    "Software"), to deal in the Software without restriction, including
-    without limitation the rights to use, copy, modify, merge, publish,
-    distribute, sublicense, and/or sell copies of the Software, and to
-    permit persons to whom the Software is furnished to do so, subject to
-    the following conditions:
-
-    The above copyright notice and this permission notice shall be included
-    in all copies or substantial portions of the Software.
-
-    THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS
-    OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-    MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-    IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-    CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-    TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-    SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+    <http://creativecommons.org/publicdomain/zero/1.0>
 
