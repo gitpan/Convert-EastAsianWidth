@@ -1,5 +1,5 @@
 ---
-abstract: 'Convert between full- and half-width characters'
+abstract: 'Convert between full/half-width ASCII characters'
 author:
   - '唐鳳 <cpan@audreyt.org>'
 build_requires:
@@ -20,9 +20,9 @@ no_index:
 provides:
   Convert::EastAsianWidth:
     file: lib/Convert/EastAsianWidth.pm
-    version: 1.00
+    version: 1.01
 requires:
   perl: 5.8.0
 resources:
   repository: http://github.com/audreyt/convert-eastasianwidth
-version: 1.00
+version: 1.01

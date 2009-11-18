@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.60.
+signed via the Module::Signature module, version 0.61.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,11 +14,11 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 bb43ee07f6e5bf6b959c4a2c3d13a95c85e672ea Changes
+SHA1 72292e3f551cbe743b248d571526b0ace14d2466 Changes
 SHA1 fe9a1f151fe31291d04e73eed9ef23634a983f88 MANIFEST
-SHA1 fc6e23bfdc43edd5eafd056f3680af985246fd48 META.yml
+SHA1 2cf853ea84b56b3f29ba367dc4847cfa54b162d4 META.yml
 SHA1 9fb2f17896d0585d61277184a496b148378b18d6 Makefile.PL
-SHA1 081506d473da4159dd4e84b5a94e95292156ae31 README
+SHA1 cc9e913e820b9a10eb978b5c77f7a8ff1c19085f README
 SHA1 fd5f3c4f0418efee3b9b16cf8c3902e8374909df inc/Module/Install.pm
 SHA1 7cd7c349afdf3f012e475507b1017bdfa796bfbd inc/Module/Install/Base.pm
 SHA1 ba186541bbf6439111f01fc70769cf24d22869bf inc/Module/Install/Can.pm
@@ -28,14 +28,14 @@ SHA1 12bf1867955480d47d5171a9e9c6a96fabe0b58f inc/Module/Install/Metadata.pm
 SHA1 a615bb050ca0b2d79bfa0224addcb83019a53b09 inc/Module/Install/ReadmeFromPod.pm
 SHA1 f7ee667e878bd2faf22ee9358a7b5a2cc8e91ba4 inc/Module/Install/Win32.pm
 SHA1 8ed29d6cf217e0977469575d788599cbfb53a5ca inc/Module/Install/WriteAll.pm
-SHA1 10054d2b9bc63c663b5049da85aff6314ce50ad3 lib/Convert/EastAsianWidth.pm
+SHA1 ecf93718c47430116d2fafbce6a83aa380556234 lib/Convert/EastAsianWidth.pm
 SHA1 41afe2c04bb573b40e283e2b210ed70a47a3f8ba t/0-signature.t
 SHA1 a458bc1914d4adb00f3bbdb6c87a519b777d8bfc t/1-basic.t
 SHA1 bcaff05b66b6f4ee85600aeef924c9ea10d030ac t/2-big5.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (Darwin)
 
-iEYEARECAAYFAksCMvYACgkQtLPdNzw1AaAwkgCgrJ/4FFj605UC9sXLwW06ey0j
-3q8AoJUNhHAwsSKVe09zpnV5AEEWmsfj
-=a0Df
+iEYEARECAAYFAksEJ/YACgkQtLPdNzw1AaBHNACgmJR3J21w+m7NWECh36FIE0lY
+r6kAn2KqZhAAgmEsl7xk4MQyWNLwaVas
+=CkHk
 -----END PGP SIGNATURE-----
