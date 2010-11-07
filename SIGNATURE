@@ -1,5 +1,5 @@
 This file contains message digests of all files listed in MANIFEST,
-signed via the Module::Signature module, version 0.61.
+signed via the Module::Signature module, version 0.66.
 
 To verify the content in this distribution, first make sure you have
 Module::Signature installed, then type:
@@ -14,28 +14,29 @@ not run its Makefile.PL or Build.PL.
 -----BEGIN PGP SIGNED MESSAGE-----
 Hash: SHA1
 
-SHA1 72292e3f551cbe743b248d571526b0ace14d2466 Changes
-SHA1 fe9a1f151fe31291d04e73eed9ef23634a983f88 MANIFEST
-SHA1 2cf853ea84b56b3f29ba367dc4847cfa54b162d4 META.yml
-SHA1 9fb2f17896d0585d61277184a496b148378b18d6 Makefile.PL
-SHA1 cc9e913e820b9a10eb978b5c77f7a8ff1c19085f README
-SHA1 fd5f3c4f0418efee3b9b16cf8c3902e8374909df inc/Module/Install.pm
-SHA1 7cd7c349afdf3f012e475507b1017bdfa796bfbd inc/Module/Install/Base.pm
-SHA1 ba186541bbf6439111f01fc70769cf24d22869bf inc/Module/Install/Can.pm
-SHA1 aaa50eca0d7751db7a4d953fac9bc72c6294e238 inc/Module/Install/Fetch.pm
-SHA1 3e83972921d54198d1246f7278f08664006cd65d inc/Module/Install/Makefile.pm
-SHA1 12bf1867955480d47d5171a9e9c6a96fabe0b58f inc/Module/Install/Metadata.pm
+SHA1 239ecc2f8a9152ed24a12fc8f6e85e26360e62dc Changes
+SHA1 87aa859f555c23d0d56193b78e71796c74f618ef MANIFEST
+SHA1 4fc545d5e4e5c9b098af2b255ebc756b3b1771dc META.yml
+SHA1 8db96727c91f6679cf79cd46613df7e5b0625b19 Makefile.PL
+SHA1 be9c8d9df036b05c11fc038c45653600620345c9 README
+SHA1 7305dbe2904416e28decb05396988a5d51d578be inc/Module/Install.pm
+SHA1 129960509127732258570c122042bc48615222e1 inc/Module/Install/Base.pm
+SHA1 cf3356ed9a5bd2f732527ef9e7bc5ef4458c8a93 inc/Module/Install/Can.pm
+SHA1 a17a3743f8dd277d970dcfd09a909e99b497d8fb inc/Module/Install/DSL.pm
+SHA1 bf0a3e1977effc2832d7a813a76dce3f31b437b6 inc/Module/Install/Fetch.pm
+SHA1 b721c93ca5bc9a6aa863b49af15f1b1de6125935 inc/Module/Install/Makefile.pm
+SHA1 026cc0551a0ad399d195e395b46bdf842e115192 inc/Module/Install/Metadata.pm
 SHA1 a615bb050ca0b2d79bfa0224addcb83019a53b09 inc/Module/Install/ReadmeFromPod.pm
-SHA1 f7ee667e878bd2faf22ee9358a7b5a2cc8e91ba4 inc/Module/Install/Win32.pm
-SHA1 8ed29d6cf217e0977469575d788599cbfb53a5ca inc/Module/Install/WriteAll.pm
-SHA1 ecf93718c47430116d2fafbce6a83aa380556234 lib/Convert/EastAsianWidth.pm
+SHA1 5457015ea5a50e93465bf2dafa29feebd547f85b inc/Module/Install/Win32.pm
+SHA1 051e7fa8063908befa3440508d0584a2497b97db inc/Module/Install/WriteAll.pm
+SHA1 4b8dec06ed2bb8f77c6795ef762755bf95e3cd82 lib/Convert/EastAsianWidth.pm
 SHA1 41afe2c04bb573b40e283e2b210ed70a47a3f8ba t/0-signature.t
 SHA1 a458bc1914d4adb00f3bbdb6c87a519b777d8bfc t/1-basic.t
 SHA1 bcaff05b66b6f4ee85600aeef924c9ea10d030ac t/2-big5.t
 -----BEGIN PGP SIGNATURE-----
 Version: GnuPG v1.4.10 (Darwin)
 
-iEYEARECAAYFAksEJ/YACgkQtLPdNzw1AaBHNACgmJR3J21w+m7NWECh36FIE0lY
-r6kAn2KqZhAAgmEsl7xk4MQyWNLwaVas
-=CkHk
+iEYEARECAAYFAkzWG6wACgkQtLPdNzw1AaCnoACguAO1zz9OHiBHE/hIaPGm+zWR
+KXcAoJ9P6QMVvx5oaTMc1rt3dpmbmFy+
+=VSiU
 -----END PGP SIGNATURE-----
